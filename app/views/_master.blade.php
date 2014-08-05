@@ -32,6 +32,13 @@
 	</div>
 	@endif
 
+	@if(Session::get('status_message'))
+	<div class="alert alert-status">
+    <a href="#" class="close" data-dismiss="alert">&times;</a>
+    <strong>Success</strong> {{ Session::get('status_message') }}.
+	</div>
+	@endif
+
     @yield('maincontent')
 	</div>
     

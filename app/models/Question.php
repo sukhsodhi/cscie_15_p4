@@ -10,4 +10,20 @@ class Question extends Eloquent {
     	# Question belongs to QuestionType
 	    return $this->belongsTo('QuestionType','type_id');
     }
+
+    /**
+	* Gets the authors as a id -> name key value pair. Useful for building selects.
+	*/
+	public static function getIdNamePair() {
+
+		$questions  = Array();
+
+		$collection = Question::all();	
+
+		foreach($collection as $question) {
+			$questions[$question->id] = $question->question_name;
+		}	
+
+		return $questions;	
+	}
 }

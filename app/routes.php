@@ -24,6 +24,15 @@ Route::post('/questiontype/create', 'QuestionTypeController@postInsert');
 Route::get('/questiontype/delete/{id}','QuestionTypeController@getDelete');
 
 /*-------------------------------------------------------------------------------------------------
+// ! Answer 
+Implicit RESTful Routing
+-------------------------------------------------------------------------------------------------*/
+Route::get('/answer/', 'UserQuestionAnswerController@getIndex');
+Route::post('/answer/update', 'UserQuestionAnswerController@postEdit');
+Route::post('/answer/create', 'UserQuestionAnswerController@postInsert');
+Route::get('/answer/delete/{id}','UserQuestionAnswerController@getDelete');
+
+/*-------------------------------------------------------------------------------------------------
 // ! User
 Explicit Routing taken from FooBooks from class project
 -------------------------------------------------------------------------------------------------*/

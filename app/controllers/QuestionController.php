@@ -94,6 +94,6 @@ class QuestionController extends \BaseController {
 		}
 
 
-		return Redirect::to('/question/')->with('flash_message','Your Question been added.');
+		return Redirect::to('/question/')->with('status_message','Your Question been added.');
 	}
 }

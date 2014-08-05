@@ -41,7 +41,7 @@ class QuestionTypeController extends \BaseController {
 		$questionType = QuestionType::findOrFail($id);
 		$questionType->delete();
 
-		return Redirect::action('QuestionTypeController@getIndex')->with('flash_message','Your changes have been saved.');
+		return Redirect::action('QuestionTypeController@getIndex')->with('status_message','Your changes have been saved.');
 
 	}
 
@@ -82,7 +82,7 @@ class QuestionTypeController extends \BaseController {
 		}
 
 
-		return Redirect::action('QuestionTypeController@getIndex')->with('flash_message','Your Question Type been added.');
+		return Redirect::action('QuestionTypeController@getIndex')->with('status_message','Your Question Type been added.');
 	}
 
 
